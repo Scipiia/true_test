@@ -1,0 +1,411 @@
+/* в основном всё обычным css прописано, просто я стал использовать tailwindcss и он мне нравится
+	но тут макет не из простых, поэтому мало его использовал, ну и пока изучаю его, по нему мало гайдов 
+	хотя он в принципе не сложный, аналог бутстрапа всё таки
+*/
+
+@import "../../node_modules/tailwindcss/dist/base.css";
+@import "../../node_modules/tailwindcss/dist/components.css";
+@import "../../node_modules/tailwindcss/dist/utilities.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;1,500&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+video {
+	max-height: 100vh;
+	max-height: 100vh;
+	margin-left: -360px;
+	clip-path: url(#clip-path);
+}
+
+svg {
+	margin: 0;
+	padding: 0;
+}
+
+.sloi {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: url("../image/background.png") no-repeat;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nav a {
+	color: #1d1d1b;
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+a:hover {
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid #c7af8a;
+}
+
+.jungle {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	align-items: flex-end;
+	position: absolute;
+	right: 0;
+	top: 12%;
+	opacity: 0;
+}
+
+.jungle1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	align-items: flex-end;
+	position: absolute;
+	right: 0;
+	top: 12%;
+	transition: 1s;
+	opacity: 1;
+}
+
+
+.jungle .jungle__after {
+	position: absolute;
+	top: -12%;
+	right: 65%;
+	color: #444444;
+	font-size: 24px;
+	animation-delay: 2s;
+}
+
+.jungle .jundle__before {
+	position: absolute;
+	right: 0%;
+	bottom: -20%;
+	margin-top: 20px;
+	color: #444444;
+	font-size: 31px;
+	font-weight: 400;
+}
+
+.card {
+	background: url("../image/рамка_вертик.png") no-repeat;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 20%;
+	bottom: 0;
+	margin-left: 40px;
+	opacity: 0;
+}
+
+.card1 {
+	background: url("../image/рамка_вертик.png") no-repeat;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 20%;
+	bottom: 10%;
+	margin-left: 40px;
+	transition: 1s;
+	opacity: 1;
+}
+
+
+.card .ot {
+	margin-left: 60px;
+	color: #c7af8a;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.card .rub {
+	margin-left: 60px;
+	color: #c7af8a;
+	font-size: 44px;
+	font-weight: 500;
+}
+
+.card .day {
+	margin-left: 60px;
+	color: #c7af8a;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: end;
+	margin-right: 100px;
+}
+
+.card p{
+	margin-left: 60px;
+	color: #444444;
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.footer {
+	height: 64px;
+	background-color: #d3c1a2;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.input {
+	width: 161px;
+	height: 48px;
+	border-radius: 3px;
+	background-color: #ffffff;
+
+}
+
+.input1 {
+	width: 85px;
+	height: 48px;
+	border-radius: 3px;
+	background-color: #ffffff;
+	align-items: center;
+	padding-left: 20px;
+}
+
+.footer::after {
+	content: url("../image/afterLine.png");
+	position: absolute;
+	top: -45px;
+	right: 14%;
+
+}
+
+.footer::before {
+	content: url("../image/afterLine.png");
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: -45px;
+	right: 14%;
+}
+
+.footer span {
+	color: #444444;
+	font-size: 34px;
+	font-weight: 400;
+}
+
+.btn {
+	color: #333333;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+
+	width: 180px;
+	height: 48px;
+	box-shadow: 0 5px 6px rgba(87, 91, 124, 0.45);
+	border-radius: 3px;
+	background-color: #fbd407;
+}
+
+
+@media (max-width: 1024px) {
+	.sloi {
+		display: flex;
+		flex-direction: column;
+	}
+	video {
+		display: none;
+	}
+	svg {
+		display: none;
+	}
+
+	.jungle1 {
+		margin: auto;
+		margin-right: 100px;
+	}
+
+	.card1 {
+		margin: auto;
+		margin-right: 30px;
+	}
+
+	.footer span{
+		color: #444444;
+		font-size: 24px;
+		font-weight: 400;
+	}
+
+	.nav a {
+		color: #1d1d1b;
+		font-size: 22px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width: 768px){
+	.sloi {
+		width: 100vh;
+		height: 100vh;
+	}
+
+	.nav a {
+		color: #1d1d1b;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	.jungle .jungle__after {
+		position: absolute;
+		top: -12%;
+		right: 65%;
+		color: #444444;
+		font-size: 18px;
+		animation-delay: 2s;
+	}
+
+	.jungle .jundle__before {
+		position: absolute;
+		right: 0%;
+		bottom: -20%;
+		margin-top: 20px;
+		color: #444444;
+		font-size: 31px;
+		font-weight: 400;
+	}
+
+	.footer {
+		height: 40px;
+		background-color: #d3c1a2;
+		position: relative;
+		margin-top: -200px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.input {
+		width: 80px;
+		height: 20px;
+		border-radius: 3px;
+		background-color: #ffffff;
+
+	}
+
+	.input1 {
+		width: 45px;
+		height: 20px;
+		border-radius: 3px;
+		background-color: #ffffff;
+		align-items: center;
+		padding-left: 20px;
+	}
+
+	.footer::after {
+		content: url("../image/afterLine.png");
+		position: absolute;
+		top: -45px;
+		right: 14%;
+		display: none;
+	}
+
+	.footer::before {
+		content: url("../image/afterLine.png");
+		transform: rotate(180deg);
+		position: absolute;
+		bottom: -45px;
+		right: 14%;
+		display: none;
+	}
+
+	.footer span {
+		color: #444444;
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.btn {
+		color: #333333;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+
+		width: 80px;
+		height: 20px;
+		box-shadow: 0 5px 6px rgba(87, 91, 124, 0.45);
+		border-radius: 3px;
+		background-color: #fbd407;
+	}
+
+	.card1 {
+		background: url("../image/рамка_вертик.png") no-repeat;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: 20%;
+		bottom: 25%;
+		margin-left: 40px;
+		transition: 1s;
+		opacity: 1;
+	}
+}
+
+	/* тк для анимации я скрывал блоки и добавлял их с помощью js, теперь я не 
+	знаю как их убрать (гуглил) в js пытался их убрать, но видимо я не могу
+	адекватно измерить ширину экрана, вроде на jQuery есть какие то решения
+	но я хотел бы сдлеть на чистом js это, если кто то знает правильное решение
+	этой проблемы, пожалуйста даите ответ на kuznetcov.artem.va@gmail.com */
+
+@media (max-width: 425px){
+	.nav ul {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		margin-right: 250px;
+	}
+
+	.jungle__after {
+		display: none;
+	}
+
+	.jundle__before {
+		display: none;
+	}
+
+	.nav a {
+		color: #1d1d1b;
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	.jundle1 .a1{
+		display: none;
+		opacity: 0;
+	}
+
+	.jundle .a2 {
+		display: none;
+		opacity: 0;
+	}
+
+	.footer {
+		height: 40px;
+		background-color: #d3c1a2;
+		position: relative;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+}
